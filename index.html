@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora Jesús Pérez</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+ 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ 	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+ 	crossorigin="anonymous"></script>-->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3 col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+			<div class="panel panel-primary">
+ 				<div class="panel-heading">Calculadora Online</div>
+ 				<div class="panel-body">
+ 					<div class="input-group">
+ 						<span class="scree input-group-addon" readonly=true type="string" id="opr"></span>
+ 						<input type="string" class="screen form-control" readonly=true value="" id="tResult" aria-describedby="basic-addon3">
+ 					</div>
+ 					<br>
+ 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default btn_calc" id="btn_7" value="7">7</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default btn_calc" id="btn_8" value="8">8</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default btn_calc" id="btn_9" value="9">9</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary btn_calc" id="btn_apar" value="(">(</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary btn_calc" id="btn_cpar" value=")">)</button>
+ 						</div>
+ 					</div>
+ 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default btn_calc" id="btn_4" value="4">4</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default btn_calc" id="btn_5" value="5">5</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default btn_calc" id="btn_6" value="6">6</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary btn_calc" id="btn_mul" value="*">x</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary btn_calc" id="btn_div" value="/">/</button>
+ 						</div>
+ 					</div>
+ 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_1" value="1">1</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_2" value="2">2</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_3" value="3">3</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary" id="btn_sum" value="+">+</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary" id="btn_res" value="-">-</button>
+ 						</div>
+ 					</div>
+ 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_0" value="0">0</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_pun" value=".">.</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-success" id="btn_ig" value="=">=</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary" id="btn_elev" value="^">^</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-primary" id="btn_raiz" value="">√</button>
+ 						</div>
+ 					</div>
+ 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_a">A</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_b">B</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_c">C</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_d">D</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_e">E</button>
+ 						</div>
+ 						<div class="btn-group" role="group">
+ 							<button type="button" class="btn btn-default" id="btn_f">F</button>
+ 						</div>
+ 					</div>
+ 					<button type="button" class="btn btn-danger btn-lg btn-block" id="btn_clear">Clear</button>
+ 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+ 						<div class="btn-group" role="group">
+		 					<div class="dropup">
+							    <button class="btn btn-primary dropdown-toggle btn-info" type="button" data-toggle="dropdown">S. numérico<span class="caret"></span></button>
+							    <ul class="dropdown-menu">
+							      <li><a href="#">Decimal</a></li>
+							      <li><a href="#">Hexadecimal</a></li>
+							      <li><a href="#">Binario</a></li>
+							    </ul>
+							</div>
+						</div>
+						<div class="btn-group" role="group">
+							<div class="dropup">
+							    <button class="btn btn-primary dropdown-toggle btn-warning" type="button" data-toggle="dropdown">Conv. moneda<span class="caret"></span></button>
+							    <ul class="dropdown-menu">
+							      <li><a href="#" id="set_euro">Establecer Euro</a></li>
+							      <li><a href="#" id="set_dolar">Establecer Dolar</a></li>
+							      <li><a href="#" id="set_peso">Establecer Peso</a></li>
+							      <li><a href="#" id="set_yen">Establecer Yen</a></li>
+							      <li class="divider"></li>
+							      <li><a href="#" id="to_euro">Convertir a Euro</a></li>
+							      <li><a href="#" id="to_dolar">Convertir a Dolar</a></li>
+							      <li><a href="#" id="to_peso">Convertir a Peso</a></li>
+							      <li><a href="#" id="to_yen">Convertir a Yen</a></li>
+							    </ul>
+							</div>
+						</div>
+					</div>
+ 				</div>
+ 			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var arrayOp = new Array();
+	var temporal = '0';
+	var uno = document.getElementById("btn_1");
+	var dos = document.getElementById("btn_2");
+	var tres = document.getElementById("btn_3");
+	var cuatro = document.getElementById("btn_4");
+	var cinco = document.getElementById("btn_5");
+	var seis = document.getElementById("btn_6");
+	var siete = document.getElementById("btn_7");
+	var ocho = document.getElementById("btn_8");
+	var nueve = document.getElementById("btn_9");
+	var cero = document.getElementById("btn_0");
+	var punto = document.getElementById("btn_pun");
+	var suma = document.getElementById("btn_sum");
+	var resta = document.getElementById("btn_res");
+	var multiplicacion = document.getElementById("btn_mul");
+	var division = document.getElementById("btn_div");
+	var igual = document.getElementById("btn_ig");
+	var raiz = document.getElementById("btn_raiz");
+	var elevar = document.getElementById("btn_elev");
+	var abrePar = document.getElementById("btn_apar");
+	var cierraPar = document.getElementById("btn_cpar");
+	var clear = document.getElementById("btn_clear");
+	var resultado = document.getElementById("tResult");
+	var operacion = document.getElementById("opr");
+
+
+
+	clear.onclick=function(e){
+		operacion.textContent=null;
+		temporal='0';
+		arrayOp.length=0
+		resultado.value='';
+	}
+	
+	function impressNumber(val){
+		operacion.textContent=operacion.textContent+val;
+		temporal+=val;
+	}
+	function addOperator(val){
+		operacion.textContent=operacion.textContent+ val;
+		arrayOp.push(temporal);		
+		arrayOp.push(val);
+		temporal='0';
+	}
+	//botones de numeros.
+	nueve.onclick = function(e){
+		impressNumber(e.target.value);
+	};
+	ocho.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	siete.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	seis.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	cinco.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	cuatro.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	tres.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	dos.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	uno.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	cero.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	punto.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	//No se por que, los parentesis no los tiene en cuenta el eval() y cuando los uso no da resultado.
+	/*abrePar.onclick=function(e){
+		impressNumber(e.target.value);
+	};
+	cierraPar.onclick=function(e){
+		impressNumber(e.target.value);
+	};*/
+
+	//botones de operacion
+	suma.onclick=function(e){
+		addOperator(e.target.value);
+	};
+	resta.onclick=function(e){
+		addOperator(e.target.value);
+	};
+	multiplicacion.onclick=function(e){
+		addOperator(e.target.value);
+	};
+	division.onclick=function(e){
+		addOperator(e.target.value);
+	};
+	/*raiz.onclick=function(e){
+		addOperator(e.target.value);
+	};*/
+	/*elevar.onclick=function(e){
+		addOperator(e.target.value);
+	};*/
+	igual.onclick=function(e){
+		arrayOp.push(temporal);
+		
+		var final=arrayToString(arrayOp);		
+		Calc(final);
+		temporal=null;
+	};
+	function arrayToString(array){
+		var aCalcular='';
+		for(var i=0; i<array.length; i++){
+			aCalcular+=array[i];
+		}
+		return aCalcular;
+	}
+	function Calc(array){
+			var r = eval(array);
+			if((isNaN(r)) || (!isFinite(r))){
+				resultado.value='0';
+				operacion.value='Error';
+			}else{
+				resultado.value=r;
+			}
+	}
+</script>
+</html>
